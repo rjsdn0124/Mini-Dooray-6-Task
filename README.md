@@ -11,3 +11,9 @@
   - GET /api/task/1
   - GET /api/tasks/projects/1
   - POST /api/task
+- 브랜치 전략<br/>
+main<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;ㄴdevelop<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㄴfeature/{기능 이름}<br/>
+
+기능 완성 시 develop으로 pull request 후 merge 입니당
