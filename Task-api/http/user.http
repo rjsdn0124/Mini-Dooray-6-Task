@@ -1,0 +1,14 @@
+### 유저 정보 가져오기
+GET http://localhost:8080/api/user/jungGyu
+
+### 유저 등록하기
+POST http://localhost:8080/api/user
+Content-Type: application/json
+
+{
+  "userId" : "jungGyu"
+}
+
+### 유저 삭제하기
+DELETE http://localhost:8080/api/user
+X-USER-ID: jungGyu

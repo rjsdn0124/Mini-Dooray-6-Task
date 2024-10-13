@@ -1,0 +1,37 @@
+### 마일스톤 목록 가져오기
+GET http://localhost:8080/api/milestones
+Content-Type: application/json
+
+### 마일스톤 생성
+POST http://localhost:8080/api/milestones
+Content-Type: application/json
+X-USER-ID: jungGyu
+
+{
+  "title" : "테스트4",
+  "initDate" : "2024-05-24T13:40:26",
+  "dueDate" : "2024-10-24T13:40:26",
+  "projectId" : 1
+}
+
+### 마일스톤 업데이트
+PUT http://localhost:8080/api/milestones/5
+Content-Type: application/json
+X-USER-ID: jungGyu
+
+{
+  "title" : "테스트2",
+  "initDate" : "2024-10-12T15:30:00",
+  "dueDate" : "2024-11-11T17:00:00",
+  "projectId" : 1
+}
+
+### 특정 마일스톤 가져오기
+GET http://localhost:8080/api/milestones/5
+
+### 마일스톤 삭제
+DELETE http://localhost:8080/api/milestones/3
+X-USER-ID: jungGyu
+
+### 특정 프로젝트 내 모든 마일스톤 가져오기
+GET http://localhost:8080/api/milestones/projects/7

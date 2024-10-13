@@ -1,0 +1,58 @@
+### 모든 프로젝트 조회 (No Pageable)
+GET http://localhost:8080/api/projects
+
+### 프로젝트 리스트 조회 (Pageable)
+GET http://localhost:8080/api/projects?page=0&size=3
+
+### 특정 프로젝트 조회
+GET http://localhost:8080/api/projects/1
+
+### 프로젝트 생성
+POST http://localhost:8080/api/projects
+Content-Type: application/json
+X-USER-ID: jungGyu
+
+{
+  "title" : "정규상의 개인 프로젝트",
+  "status" : 1
+}
+
+### 프로젝트 삭제
+DELETE http://localhost:8080/api/projects/1
+X-USER-ID: jungGyu
+
+### 프로젝트 업데이트
+PUT http://localhost:8080/api/projects/1
+Content-Type: application/json
+X-USER-ID: jungGyu
+
+{
+  "title" : "희망이 밥 주떼염",
+  "status" : 1,
+  "userId" : "user"
+}
+
+### 특정 유저가 생성한 프로젝트 목록 조회
+GET http://localhost:8080/api/projects/user
+X-USER-ID: jungGyu
+
+### 활성중인 프로젝트 목록
+GET http://localhost:8080/api/projects/active
+
+### 특정 유저가 만든 활성중인 프로젝트 목록
+GET http://localhost:8080/api/projects/active/user
+X-USER-ID: jungGyu
+
+### 휴면 상태인 프로젝트 목록
+GET http://localhost:8080/api/projects/inactive
+
+### 특정 유저가 만든 휴면 상태인 프로젝트 목록
+GET http://localhost:8080/api/projects/inactive/user
+X-USER-ID: jungGyu
+
+### 종료된 프로젝트 목록
+GET http://localhost:8080/api/projects/terminated
+
+### 특정 유저가 만든 종료된 프로젝트 목록
+GET http://localhost:8080/api/projects/terminated/user
+X-USER-ID: jungGyu

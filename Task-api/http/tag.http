@@ -1,0 +1,32 @@
+### 모든 태그 가져오기
+GET http://localhost:8080/api/tags
+
+### 특정 프로젝트의 모든 태그 가져오기
+GET http://localhost:8080/api/tags/projects/1
+
+### 특정 태그 가져오기
+GET http://localhost:8080/api/tags/2
+
+### 태그 등록하기
+POST http://localhost:8080/api/tags
+Content-Type: application/json
+X-USER-ID: jungGyu
+
+{
+  "content" : "11111",
+  "projectId" : 1
+}
+
+### 태그 업데이트 하기
+PUT http://localhost:8080/api/tags/1
+Content-Type: application/json
+X-USER-ID: jungGyu
+
+{
+  "content" : "2222",
+  "projectId" : 1
+}
+
+### 태그 삭제하기
+DELETE http://localhost:8080/api/tags/1
+X-USER-ID: jungGyu
